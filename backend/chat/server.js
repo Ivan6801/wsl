@@ -22,7 +22,7 @@ router.post("/message", function (req, res) {
 router.delete("/message", function (req, res) {
   console.log(req.query);
   console.log(req.body);
-  res.status(201).send();
+  res.status(201).send([{ error: '', body: 'Creado correctamente' }]);
 });
 
 // app.use('/', function(req, res) {
