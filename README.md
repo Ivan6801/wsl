@@ -1,2 +1,2 @@
 # wsl
-Spanish and English dictionary online signs create website platform.
+This is a mobile app that show mexican signs language  with user's coperation
