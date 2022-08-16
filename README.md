@@ -1,2 +1,2 @@
 # wsl
-This is a mobile app that show mexican signs language  with user's coperation
+This is a mobile app that show Mexican signs language  with users's cooperation
