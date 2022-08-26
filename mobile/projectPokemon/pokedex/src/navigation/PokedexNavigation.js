@@ -1,9 +1,9 @@
 import React from "react";
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from "@react-navigation/stack";
 import PokedexScreen from "../screens/Pokedex";
 import PokemonScreen from "../screens/Pokemon";
 
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 
 export default function PokedexNavigation() {
   return (
@@ -13,7 +13,11 @@ export default function PokedexNavigation() {
         component={PokedexScreen}
         options={{ title: "", headerTransparent: true }}
       />
-      <Stack.Screen name="Pokemon" component={PokemonScreen} />
+      <Stack.Screen
+        name="Pokemon"
+        component={PokemonScreen}
+        options={{ title: "", headerTransparent: true }}
+      />
     </Stack.Navigator>
   );
 }
