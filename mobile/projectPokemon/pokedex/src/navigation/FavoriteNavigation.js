@@ -1,8 +1,9 @@
 import React from "react";
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from "@react-navigation/stack";
 import FavoriteScreen from "../screens/Favorite";
+import PokemonScreen from "../screens/Pokemon";
 
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 
 export default function FavoriteNavigation() {
   return (
@@ -11,6 +12,14 @@ export default function FavoriteNavigation() {
         name="Favorite"
         component={FavoriteScreen}
         options={{ title: "Favoritos" }}
+      />
+      <Stack.Screen
+        name="Pokemon"
+        component={PokemonScreen}
+        options={{
+          title: "",
+          headerTransparent: true,
+        }}
       />
     </Stack.Navigator>
   );

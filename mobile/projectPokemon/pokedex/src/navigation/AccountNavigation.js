@@ -1,8 +1,8 @@
 import React from "react";
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from "@react-navigation/stack";
 import AccountScreen from "../screens/Account";
 
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 
 export default function AccountNavigation() {
   return (
@@ -10,7 +10,7 @@ export default function AccountNavigation() {
       <Stack.Screen
         name="Account"
         component={AccountScreen}
-        options={{ title: "Mi cuenta", headerTransparent: true }}
+        options={{ title: "Mi cuenta" }}
       />
     </Stack.Navigator>
   );
