@@ -1,4 +1,5 @@
 import React from "react";
+import { View, Text } from 'react-native'
 import Icon from "react-native-vector-icons/FontAwesome5";
 
 export default function Favorite(props) {
@@ -9,12 +10,15 @@ export default function Favorite(props) {
   };
 
   return (
-    <Icon
-      name="heart"
-      color="#fff"
-      size={20}
-      onPress={addFavorite}
-      style={{ marginRight: 20 }}
-    />
+    <View>
+      <Text>Favorite</Text>
+    </View>
+    // <Icon
+    //   name="heart"
+    //   color="#000"
+    //   size={20}
+    //   onPress={addFavorite}
+    //   style={{ marginRight: 20 }}
+    // />
   );
 }
