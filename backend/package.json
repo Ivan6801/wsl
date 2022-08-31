@@ -1,0 +1,19 @@
+{
+  "name": "wsl-backend",
+  "version": "0.1.0",
+  "description": "App buscador de videos en lengua de senas",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "app",
+    "lsm",
+    "senas"
+  ],
+  "author": "Ivan Ozono Peinado",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
