@@ -4,7 +4,6 @@ import { useFocusEffect } from "@react-navigation/native";
 import { size } from "lodash";
 import useAuth from "../../hooks/useAuth";
 import { getPokemonsFavoriteApi } from "../../utils/getColorByPokemonType";
-import bola from "../../assets/bola.gif";
 
 export default function UserData() {
   const { auth, logout } = useAuth();
@@ -61,8 +60,8 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   image: {
-    width: 10,
-    height: 10,
+    width: 30,
+    height: 30,
     resizeMode: "cover",
   },
   titleBlock: {
