@@ -1,10 +1,10 @@
 import React, { useState, useCallback } from "react";
-import { StyleSheet, View, Text, Button } from "react-native";
+import { StyleSheet, View, Text, Image, Button } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 import { size } from "lodash";
 import useAuth from "../../hooks/useAuth";
 import { getPokemonsFavoriteApi } from "../../utils/getColorByPokemonType";
-
+import bola from "../../assets/bola.gif";
 
 export default function UserData() {
   const { auth, logout } = useAuth();
@@ -26,7 +26,9 @@ export default function UserData() {
   return (
     <View style={styles.content}>
       <View style={styles.titleBlock}>
-        <Text style={styles.title}>Bienvenido,</Text>
+        <Text style={styles.title}>
+          Bienvenido, <Image style={styles.image} source={{ uri: 'https://cdn76.picsart.com/209915339005202.gif' }} />
+        </Text>
         <Text style={styles.title}>{`${auth.firstName} ${auth.lastName}`}</Text>
       </View>
 
@@ -57,6 +59,11 @@ const styles = StyleSheet.create({
   content: {
     marginHorizontal: 20,
     marginTop: 20,
+  },
+  image: {
+    width: 10,
+    height: 10,
+    resizeMode: "cover",
   },
   titleBlock: {
     marginBottom: 30,
