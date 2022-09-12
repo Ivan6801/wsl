@@ -1,21 +1,18 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import HomeScreen from "../screens/Home";
+import AccountNavigation from "./AccountNavigation";
 
 const Tab = createBottomTabNavigator();
 
 export default function Navigation() {
   return (
-    <Tab.Navigator
-      initialRouteName="Home"
-      screenOptions={{
-        tabBarActiveTintColor: "purple",
-      }}
-    >
+    <Tab.Navigator>
       <Tab.Screen
-        name="Home"
-        options={{ tabBarLabel: "Home" }}
-        component={HomeScreen}
+        name="Account"
+        component={AccountNavigation}
+        options={{
+          tabBarLabel: "Mi cuenta",
+        }}
       />
     </Tab.Navigator>
   );
