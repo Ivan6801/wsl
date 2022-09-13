@@ -39,8 +39,8 @@ export default function Pokedex() {
 
   return (
     <SafeAreaView>
-      <PokemonList 
-        pokemons={pokemons} 
+      <PokemonList
+        pokemons={pokemons}
         loadPokemons={loadPokemons}
         nextUrl={nextUrl}
       />
