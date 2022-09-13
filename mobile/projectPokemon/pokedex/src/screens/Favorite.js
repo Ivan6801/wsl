@@ -5,7 +5,7 @@ import { getPokemonsFavoriteApi } from "../api/favorite";
 export default function Favorite() {
   const checkFavorites = async () => {
     const response = await getPokemonsFavoriteApi();
-    console.log(response);
+    console.log("Favorite: ", response);
   };
 
   return (
