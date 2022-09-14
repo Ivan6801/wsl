@@ -7,7 +7,7 @@ import { getPokemonsFavoriteApi } from "../../api/favorite";
 
 export default function UserData() {
   const { auth, logout } = useAuth();
-  const [total, setTotal] = useState(10);
+  const [total, setTotal] = useState(0);
 
   useFocusEffect(
     useCallback(() => {
