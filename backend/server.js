@@ -10,11 +10,14 @@ app.use (router);
 router.get ('/words', function (req,res){
     console.log(req.body);
     console.log(req.query);
+    
     res.send('Desde al servidopr de wsl ' + req.body.text + ' desde router get' );
+    
 });
 
 router.post ('/words', function (req,res){
-    res.send('Holaaa al servidopr de wsl desde router post');
+    res.status(201).send({error: '', body: 'creado correctamente'});
+    
 });
 
 router.put ('/words', function (req,res){
