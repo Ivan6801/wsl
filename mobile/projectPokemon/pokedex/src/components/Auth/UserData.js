@@ -3,11 +3,11 @@ import { StyleSheet, View, Text, Image, Button } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 import { size } from "lodash";
 import useAuth from "../../hooks/useAuth";
-import { getPokemonsFavoriteApi } from "../../utils/getColorByPokemonType";
+import { getPokemonsFavoriteApi } from "../../api/favorite";
 
 export default function UserData() {
   const { auth, logout } = useAuth();
-  const [total, setTotal] = useState(0);
+  const [total, setTotal] = useState(10);
 
   useFocusEffect(
     useCallback(() => {
@@ -26,7 +26,11 @@ export default function UserData() {
     <View style={styles.content}>
       <View style={styles.titleBlock}>
         <Text style={styles.title}>
-          Bienvenido, <Image style={styles.image} source={{ uri: 'https://cdn76.picsart.com/209915339005202.gif' }} />
+          Bienvenido,{" "}
+          <Image
+            style={styles.image}
+            source={{ uri: "https://cdn76.picsart.com/209915339005202.gif" }}
+          />
         </Text>
         <Text style={styles.title}>{`${auth.firstName} ${auth.lastName}`}</Text>
       </View>
