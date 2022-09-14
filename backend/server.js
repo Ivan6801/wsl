@@ -8,6 +8,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use (router);
 
 router.get ('/words', function (req,res){
+    console.log(req.headers);
     console.log(req.body);
     console.log(req.query);
     res.send('Desde al servidopr de wsl ' + req.body.text + ' desde router get' );
