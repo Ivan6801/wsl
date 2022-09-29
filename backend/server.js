@@ -18,7 +18,7 @@ router.get ('/words', function (req,res){
 
 router.post ('/words', function (req,res){
     if (req.query.error=="ok"){
-        response.error(req, res, ' simulated error');
+        response.error(req, res, ' simulated error',500, 'Error confidencial en server');
     } else {
         response.success(req, res, ' word created',201);
     }
