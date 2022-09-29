@@ -27,16 +27,19 @@ router.post ('/words', function (req,res){
 });
 
 router.put ('/words', function (req,res){
-    res.send('Holaaa al servidopr de wsl desde router put');
+    response.success(req, res, 'word updated',200);
+   
 });
 
 router.patch ('/words', function (req,res){
-    res.send('Holaaa al servidopr de wsl desde router patch');
+    response.success(req, res, 'word changed',200);
 });
 
 router.delete ('/words', function (req,res){
-    res.send('Holaaa al servidopr de wsl desde router delete');
+    response.success(req, res, 'words deleted',200);
 });
+
+app.use('/app',express.static('public'));
 
 app.listen(3000);
 console.log('La aplicacion esta funcionando en http://localhost:3000 ');

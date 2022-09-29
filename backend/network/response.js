@@ -3,7 +3,7 @@
 exports.success = function (req, res, message, status){
     res.status(status || 200 ).send
     ({
-        error: ' ',
+        error: '',
         body: message});
 }
 
@@ -11,5 +11,5 @@ exports.error = function (req, res, message, status){
     res.status(status || 400 ).send
     ({
         error: message,
-        body: ' '});
+        body: ''});
 }
