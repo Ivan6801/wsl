@@ -27,7 +27,7 @@ router.post ('/words', function (req,res){
 });
 
 router.put ('/words', function (req,res){
-    response.success(req, res, 'word updated',200);
+    response.success(req, res, 'word updated successed',200);
    
 });
 
