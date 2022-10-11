@@ -1,4 +1,5 @@
 const express = require ('express');
+const controller = require ('../words/controller')
 const router = express.Router();
 const response = require ('../../network/response');
 
@@ -10,13 +11,13 @@ router.get ('/', function (req,res){
 });
 
 router.post ('/', function (req,res){
-    if (req.query.error=="ok"){
-        response.error(req, res, ' simulated error',500,'simulacion error en consola');
-    } else {
-        response.success(req, res, ' word created',201);
-    }
-   
-    
+    controller.addWord(req.body.user, req.body.word)  
+        .then((fullWord) => {
+            response.success(req, res, fullWord,201); 
+            })
+        .catch (e => {
+            response.error(req, res, ' info invalida',400,'error en el controlador');
+            }); 
 });
 
 router.put ('/', function (req,res){
